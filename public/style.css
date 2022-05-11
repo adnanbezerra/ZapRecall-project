@@ -1,0 +1,54 @@
+body {
+    background-color: #FB6B6B;
+    font-family: 'Recursive', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.root {
+    height: 100%
+}
+
+.container > img {
+    height: 161px;
+    width: 136px;
+    margin-bottom: 13px;
+}
+
+.title {
+    font-family: 'Righteous', cursive;
+    font-size: 36px;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.start {
+    height: 54px;
+    width: 246px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+    font-size: 18px;
+    color: #D70900;
+}
+
+.start:hover {
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header > img {
+    margin-right: 10px;
+}
