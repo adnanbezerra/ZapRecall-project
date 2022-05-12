@@ -1,31 +1,17 @@
-import Title from "./components/shared/Title"
+import MainScreen from "./components/MainScreen";
 import React from "react";
 import Zap from "./components/Zap";
 
-function MainScreen(props) {
-    return (
-        <div className="container">
-            <img src="./images/logo.png" alt="" />
-            <Title />
-
-            <button className="start" onClick={props.startZap}>Iniciar Recall!</button>
-        </div>
-    )
-}
+import "./css/reset.css"
+import "./css/style.css"
 
 export default function App() {
-    // const [tela, setTela] = React.useState(<MainScreen startZap={startZap}/>);
-    const [tela, setTela] = React.useState(<Zap />);
-
-    function startZap() {
-        setTela(<Zap />)
-    }
-
-    console.log(tela);
+    const [tela, setTela] = React.useState('zap');
+    // const [tela, setTela] = React.useState(<Zap />);
 
     return (
         <>
-            {tela}
+            {tela === 'zap' ? <MainScreen setTela={setTela} /> : <Zap />}
         </>
     )
 }
