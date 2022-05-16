@@ -1,8 +1,20 @@
-export default function InitialCard(props) {
+import CardVerse from "./CardVerse";
+import React from "react";
+
+export default function InitialCard({ cardNumber, done, setDone, listaCartoes }) {
+
+    const [carta, setCarta] = React.useState(true);
+
     return (
-        <div className="initialCard">
-            <div className="text">Pergunta {props.cardNumber}</div>
-            <ion-icon name="play-outline"></ion-icon>
-        </div>
+        <>
+            {carta ?
+                <>
+                    <div className="initialCard" onClick={() => setCarta(false)} >
+                        <div className="text">Pergunta {cardNumber}</div>
+                        <ion-icon name="play-outline"></ion-icon>
+                    </div>
+                </>
+                : <CardVerse pergunta={listaCartoes[cardNumber - 1].pergunta} cardNumber={cardNumber} listaCartoes={listaCartoes} done={done} setDone={setDone} />}
+        </>
     )
 }

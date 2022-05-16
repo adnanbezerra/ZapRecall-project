@@ -8,7 +8,7 @@ html, body {
 }
 
 .root {
-    height: 100%
+    height: fit-content;
 }
 
 .container > img {
@@ -30,8 +30,7 @@ html, body {
     height: 100%;
     flex-direction: column;
 
-    padding-top: 60px;
-    padding-bottom: 90px;
+    padding-top: 180px;
 
     box-sizing: border-box;
     overflow-y: scroll;
@@ -59,7 +58,7 @@ html, body {
     color: #D70900;
 }
 
-.start:hover, ion-icon:hover, .setinha:hover {
+.start:hover, ion-icon:hover, .setinha:hover, button:hover {
     cursor: pointer;
 }
 
@@ -74,9 +73,16 @@ html, body {
 }
 
 .text {
-    font-size: 16px;
+    font-size: 16px !important;
     font-weight: bold;
     color: #333333;
+}
+
+.text-question {
+    padding-top: 12px;
+    padding-left: 15px;
+
+    font-size: 18px;
 }
 
 .text-content {
@@ -106,6 +112,10 @@ html, body {
     margin-bottom: 25px;
 }
 
+.cardVerse {
+    margin-bottom: 25px;
+}
+
 .initialCard ion-icon {
     font-size: 25px;
 }
@@ -125,7 +135,7 @@ html, body {
     bottom: 0;
 }
 
-.cardVerse {
+.cardVerse, .cardAnswer {
     background-color: #FFFFD4;
     width: 300px;
     height: 130px;
@@ -133,6 +143,44 @@ html, body {
     border-radius: 5px;
 
     position: relative;
+}
+
+.cardAnswer {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    padding-left: 13px;
+
+    position: absolute;
+    bottom: 6px;
+}
+
+.naoLembrei{
+    background-color: #FF3030;
+}
+
+.quase {
+    background-color: #FF922E;
+}
+
+.zap {
+    background-color: #2FBE34;
+}
+
+button {
+    width: 85px;
+    height: 36px;
+
+    border-radius: 5px;
+    border: 0;
+
+    margin-right: 8px;
 }
 
 .setinha {
@@ -144,3 +192,28 @@ html, body {
     right: 10px;
 }
 
+.red, .orange, .green {
+    font-size: 23px;
+    margin-right: 5px;
+}
+
+.red {
+    color: #FF3030;
+    text-decoration-color: #FF3030;
+}
+
+.orange {
+    color: #FF922E;
+    text-decoration-color: #FF922E;
+}
+
+.green {
+    color: #2FBE34;
+    text-decoration-color: #2FBE34;
+}
+
+.orange-text, .green-text, .red-text {
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration-line: line-through;
+}
