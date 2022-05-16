@@ -41,8 +41,6 @@ export default function CardAnswer({ answerText, cardNumber, done, setDone, list
 
 
     function getAnsweredCard() {
-        console.log("to dando get agora")
-        console.log(`green: ${green}, orange: ${orange}, red: ${red}`)
 
         if(green) {
             console.log(green)

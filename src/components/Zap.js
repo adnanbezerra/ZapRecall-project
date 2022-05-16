@@ -3,6 +3,8 @@ import Card from "./Card";
 import React from 'react';
 import loguinho from "./images/loguinho.png";
 import InitialCard from "./InitialCard";
+import happy from "./images/party.png"
+import sad from "./images/sad.png"
 
 let randomized = false;
 function randomizeCards(array) {
@@ -85,6 +87,28 @@ export default function Zap() {
         }
     ]
 
+    function footerFinal() {
+        if (!done.includes(<ion-icon name="close-circle" class='red'></ion-icon>)) {
+            return (
+                <>
+                    <div className="footerFinal">
+                        <div className="finalTitle"><img src={happy} alt="" />Parabéns!</div>
+                        <div className="finalText">Você não esqueceu de nenhum flashcard!</div>
+                    </div>
+                </>
+            )
+        }
+        else return (
+            <>
+                <div className="footerFinal">
+                    <div className="finalTitle"><img src={sad} alt="" />Putz...</div>
+                    <p className="finalText">Ainda faltam alguns...</p>
+                    <p className="finalText">Mas não desanime!</p>
+                </div>
+            </>
+        )
+    }
+
     randomizeCards(listaCartoes);
 
     return (
@@ -101,7 +125,8 @@ export default function Zap() {
                 <div className="done">{done.map((icon) => icon)}</div>
             </div>
 
-            
+            {done.length !== 8 ? <></> : footerFinal()}
+
         </div>
     )
 }
