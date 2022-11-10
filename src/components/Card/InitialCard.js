@@ -2,7 +2,6 @@ import CardVerse from "./CardVerse";
 import React from "react";
 
 export default function InitialCard({ cardNumber, done, setDone, listaCartoes }) {
-
     const [carta, setCarta] = React.useState(true);
 
     return (

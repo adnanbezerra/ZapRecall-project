@@ -1,8 +1,8 @@
 import Title from "./template/Title";
-import Card from "./Card";
+import Card from "./Card/Card";
 import React from 'react';
 import loguinho from "./images/loguinho.png";
-import InitialCard from "./InitialCard";
+import InitialCard from "./Card/InitialCard";
 import happy from "./images/party.png"
 import sad from "./images/sad.png"
 
@@ -33,7 +33,6 @@ function randomizeCards(array) {
 }
 
 export default function Zap() {
-
     const [done, setDone] = React.useState([]);
 
     const listaCartoes = [

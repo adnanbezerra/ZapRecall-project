@@ -1,11 +1,10 @@
-import AnsweredCardRed from "./AnsweredCardRed";
-import AnsweredCardGreen from "./AnsweredCardGreen";
-import AnsweredCardOrange from "./AnsweredCardOrange";
+import AnsweredCardRed from "./AnsweredCards/AnsweredCardRed";
+import AnsweredCardGreen from "./AnsweredCards/AnsweredCardGreen";
+import AnsweredCardOrange from "./AnsweredCards/AnsweredCardOrange";
 import React from "react";
 
 
 export default function CardAnswer({ answerText, cardNumber, done, setDone, listaCartoes }) {
-
     const [carta, setCarta] = React.useState(true);
     const [green, setGreen] = React.useState(false);
     const [red, setRed] = React.useState(false);

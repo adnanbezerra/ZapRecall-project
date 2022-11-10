@@ -1,9 +1,8 @@
-import setinha from "./images/setinha.png"
+import setinha from "../images/setinha.png"
 import CardAnswer from "./CardAnswer"
 import React from "react";
 
 export default function CardVerse({ pergunta, cardNumber, listaCartoes, done, setDone }) {
-
     const [carta, setCarta] = React.useState(true);
 
     return (
