@@ -1,4 +1,4 @@
-export default function AnsweredCardRed({cardNumber}) {
+export default function AnsweredCardRed({ cardNumber }) {
     return (
         <div className="initialCard red">
             <div className="red-text">Pergunta {cardNumber}</div>

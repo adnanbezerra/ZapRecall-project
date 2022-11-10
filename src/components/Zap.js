@@ -1,4 +1,4 @@
-import Title from "./shared/Title";
+import Title from "./template/Title";
 import Card from "./Card";
 import React from 'react';
 import loguinho from "./images/loguinho.png";

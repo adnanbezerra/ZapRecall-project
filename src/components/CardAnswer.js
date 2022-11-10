@@ -16,7 +16,6 @@ export default function CardAnswer({ answerText, cardNumber, done, setDone, list
         setDone([...done, <ion-icon name="checkmark-circle" class='green'></ion-icon>]);
 
         setGreen(true)
-        console.log(green)
 
         setCarta(false);
     }
@@ -41,12 +40,11 @@ export default function CardAnswer({ answerText, cardNumber, done, setDone, list
 
 
     function getAnsweredCard() {
-
-        if(green) {
-            console.log(green)
-            return <AnsweredCardGreen cardNumber={cardNumber} />}
-        if(orange) return <AnsweredCardOrange cardNumber={cardNumber} /> 
-        if(red) return <AnsweredCardRed cardNumber={cardNumber} /> 
+        if (green) {
+            return <AnsweredCardGreen cardNumber={cardNumber} />
+        }
+        if (orange) return <AnsweredCardOrange cardNumber={cardNumber} />
+        if (red) return <AnsweredCardRed cardNumber={cardNumber} />
     }
 
     return (
@@ -63,7 +61,7 @@ export default function CardAnswer({ answerText, cardNumber, done, setDone, list
                         </div>
                     </div>
                 </>
-                : getAnsweredCard() 
+                : getAnsweredCard()
             }
         </>)
 }
